@@ -1,0 +1,51 @@
+{
+  "name": "testigo-server-poc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "scripts": {
+    "setup": "tsx scripts/setup.ts",
+    "db": "tsx scripts/database.ts",
+    "migrate": "tsx scripts/migrate.ts",
+    "user": "tsx scripts/user.ts",
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "ui": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "test": "tsx --test tests/*.test.ts",
+    "simulate": "tsx scripts/simulate.ts",
+    "retention": "tsx scripts/retention.ts",
+    "browser:fixture": "tsx scripts/browser-fixture.ts",
+    "format": "prettier --write src shared ui scripts tests vite.config.ts",
+    "format:check": "prettier --check src shared ui scripts tests vite.config.ts"
+  },
+  "dependencies": {
+    "connect-pg-simple": "10.0.0",
+    "dotenv": "18.0.3",
+    "express": "5.2.1",
+    "express-rate-limit": "8.7.0",
+    "express-session": "1.19.0",
+    "helmet": "8.3.0",
+    "pg": "8.23.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/connect-pg-simple": "7.0.3",
+    "@types/express": "5.0.6",
+    "@types/express-session": "1.19.0",
+    "@types/node": "26.6.2",
+    "@types/pg": "8.23.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "embedded-postgres": "17.10.0-beta.17",
+    "prettier": "3.9.8",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "6.4.3"
+  }
+}
